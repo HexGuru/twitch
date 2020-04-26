@@ -40,7 +40,8 @@ def main():
     print(students_ids.items())  # DICT.items() returns a list of touples in the form ( key, value )
 
     # How to navigate information across different dictionaries:
-    username = input("Whats your name: ")
+    #username = input("Whats your name: ")
+    username = "Gabrio"
     userid = students_ids[username]
     print("Your grades follow:")
     for grade in students_marks[userid].items():
@@ -50,5 +51,12 @@ def main():
     for student_names in students_ids.keys():
         print(student_names)
 
+    # We can modify the state of a dictionary adding a new (key,value) pair or 
+    # modifying an existing one, let's assume Arciix just joined us
+    students_ids.update({'Arciix': 123134})
+    students_ids['NNN'] = 123132
+    print(students_ids)
+
+    
 
 main()
